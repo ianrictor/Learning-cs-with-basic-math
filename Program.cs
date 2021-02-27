@@ -20,8 +20,8 @@ namespace Learning_cs_with_basic_math
 
                 switch (menuChoice)
                 {
-                    case "1":
-                        Addition(0, 0);
+                    case "1":                       //quotes for string cases
+                        Addition(0, 0);             //initialize values to 0
                         break;
                     case "2":
                         Subtraction(0, 0);
@@ -38,18 +38,21 @@ namespace Learning_cs_with_basic_math
                     case "6":
                         sumFirstTenNumbers(0, 0);
                         break;
-                    default:
-                        Console.WriteLine("Please choose a valid option.");
+                    case "7":
+                        Environment.Exit(0);    //exits console application environment
                         break;
+                    default:
+                        Console.WriteLine("Please choose a valid option."); //accounts for bad user intput. 
+                        break;                                              //Using string rather than int for menu choice allows for much more input to direct to default!
                 }
             }
-            while (true);
+            while (true);   //automatically loops the menu after each case
         }
 
         static void Addition(int num1, int num2)
         {
             Console.WriteLine("Please enter a number: ");
-            num1 = Convert.ToInt32(Console.ReadLine());
+            num1 = Convert.ToInt32(Console.ReadLine());         //Convert.ToInt32 makes sure any input becomes an int for the function
             Console.WriteLine("Please enter another number: ");
             num2 = Convert.ToInt32(Console.ReadLine());
             int sum = num1 + num2;
@@ -82,7 +85,7 @@ namespace Learning_cs_with_basic_math
             num1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please enter another number: ");
             num2 = Convert.ToInt32(Console.ReadLine());
-            decimal quotient = num1 / num2;
+            decimal quotient = num1 / num2;                         //use decimal, float, or double to allow for non-integer quotients from two int. Ie. 7/4 etc.
             Console.WriteLine("The quotient is {0}.", quotient);
         }
 
@@ -103,9 +106,9 @@ namespace Learning_cs_with_basic_math
         }
         static void sumFirstTenNumbers(int i, int sum)
         {
-            for (i = 1; i <= 10; i++)
+            for (i = 1; i <= 10; i++)   //start at 1, for all numbers less that or equal to 10, ascend integers (hardcoded for first ten integers)
             {
-                sum = sum + i;
+                sum = sum + i;          //add up ascending integers
             }
             Console.WriteLine("The sum of 1 through 10 is {0}.", sum);
         }
