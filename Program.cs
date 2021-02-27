@@ -15,6 +15,7 @@ namespace Learning_cs_with_basic_math
                 Console.WriteLine("4. Divide two numbers.");
                 Console.WriteLine("5. Check the equality of two numbers.");
                 Console.WriteLine("6. Display the sum of the first ten natural numbers.");
+                Console.WriteLine("7. Exit Program.");
 
                 string menuChoice = Convert.ToString(Console.ReadLine());
 
