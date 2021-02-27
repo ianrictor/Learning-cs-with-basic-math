@@ -1,11 +1,13 @@
-﻿using System;
+﻿using System;              //default cleaned the code in VS, eliminating unused namespaces, leaving only System
 
-namespace Learning_cs_with_basic_math
+namespace Learning_cs_with_basic_math   //a lil program with that delves into new things. I'm thinking about adding my number sorter to the menu using arrays to
+                                        //give sort of a tour de force of the basic stuff I've learned so far!
 {
     class Program
     {
         static void Main(string[] args)
         {
+                Console.WriteLine("Welcome to Ian's Magical Maths Machine\n"); //leave the title out of the do while loop to make it appear once, \n skips a line
             do
             {
                 Console.WriteLine("Choose a calculation function:");
